@@ -34,10 +34,12 @@
 }
 
 .adyen-checkout__qr-loader__subtitle {
-    max-width: 400px;
+    font-size: token(text-body-font-size);
+    font-weight: token(text-body-font-weight);
+    line-height: token(text-body-line-height);
     color: token(color-label-primary);
-    font-size: token(text-subtitle-font-size);
-    line-height: token(text-caption-line-height);
+    margin-bottom: token(spacer-090);
+    max-width: 400px;
 }
 
 .adyen-checkout__qr-loader__icon {
@@ -89,7 +91,7 @@
 
 .adyen-checkout__button.adyen-checkout__button--qr-loader {
     text-decoration: none;
-    margin-top: token(spacer-090);
+    margin-bottom: token(spacer-040);
 }
 
 .adyen-checkout__qr-loader__instructions {
@@ -106,8 +108,9 @@
     margin-top: token(spacer-100);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     .adyen-checkout__qr-loader__app-link {
         display: block;
+        text-align: center;
     }
 }

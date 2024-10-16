@@ -2,14 +2,9 @@
 
 .adyen-checkout-payme-instructions {
     font-size: token(text-body-font-size);
-    text-align: center;
-    color: token(color-label-secondary);
+    font-weight: token(text-body-font-weight);
     line-height: token(text-body-line-height);
-
-    &__steps {
-        list-style-position: inside;
-        padding-inline-start: 0;
-        margin: token(spacer-070) 0;
-        padding-bottom: token(spacer-040);
-    }
+    color: token(color-label-primary);
+    margin-top: token(spacer-100);
+    max-width: 310px;
 }

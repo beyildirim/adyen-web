@@ -18,6 +18,8 @@
 .adyen-checkout-timeline__item {
   &:last-child {
     .adyen-checkout-timeline__item-content {
+      padding-bottom: 0;
+
       &::before {
         display: none;
       }

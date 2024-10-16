@@ -1,0 +1,10 @@
+@import 'styles/variable-generator';
+
+.adyen-checkout-payme-instroduction {
+  font-size: token(text-body-font-size);
+  font-weight: token(text-body-font-weight);
+  line-height: token(text-body-line-height);
+  color: token(color-label-primary);
+  margin-top: token(spacer-070);
+  max-width: 310px;
+}
