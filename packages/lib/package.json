@@ -144,7 +144,7 @@
     "whatwg-fetch": "3.6.20"
   },
   "dependencies": {
-    "@adyen/bento-design-tokens": "1.10.0",
+    "@adyen/bento-design-tokens": "1.30.0",
     "@types/applepayjs": "14.0.8",
     "@types/googlepay": "0.7.6",
     "classnames": "2.5.1",
