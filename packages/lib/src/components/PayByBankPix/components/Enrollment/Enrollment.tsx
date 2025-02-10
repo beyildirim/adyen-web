@@ -10,7 +10,7 @@ import getEnrollmentStatus from './getEnrollmentStatus';
 
 function Enrollment(props: EnrollmentProps) {
     const { i18n, loadingContext } = useCoreContext();
-    const issuerListRef = useRef<IIssuerList>();
+    const issuerListRef = useRef<IIssuerList>(null);
 
     const onComplete = (): void => {
         // todo: collect biometrics and call internal endpoint
@@ -37,9 +37,10 @@ function Enrollment(props: EnrollmentProps) {
                     type={props.paymentMethodType}
                     countdownTime={props.countdownTime}
                     clientKey={props.clientKey}
-                    paymentData={'dummy'}
                     onActionHandled={() => {}}
-                    onError={() => {}}
+                    onError={error => {
+                        console.log(error);
+                    }}
                     messageText={'Instruction message example'}
                     awaitText={i18n.get('await.waitForConfirmation')}
                     onComplete={onComplete}

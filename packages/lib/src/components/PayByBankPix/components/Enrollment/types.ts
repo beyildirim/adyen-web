@@ -2,12 +2,22 @@ import { h } from 'preact';
 import { PayButtonFunctionProps } from '../../../internal/UIElement/types';
 import { IssuerItem } from '../../../internal/IssuerList/types';
 import { OnChangeData } from '../../../../core/types';
+import { SendAnalyticsObject } from '../../../../core/Analytics/types';
 
 interface BaseEnrollmentProps {
+    type?: string;
     showPayButton: boolean;
+
     payButton(props: PayButtonFunctionProps): h.JSX.Element;
-    onSubmitAnalytics: () => {};
+
+    /**
+     * @internal
+     */
+    onSubmitAnalytics?: (aObj: SendAnalyticsObject) => void;
+
     onChange?(payload: OnChangeData): void;
+
+    ref: any;
 }
 
 export interface AwaitProps extends BaseEnrollmentProps {
@@ -19,9 +29,8 @@ export interface AwaitProps extends BaseEnrollmentProps {
 }
 
 export interface IssuerListProps extends BaseEnrollmentProps {
-    type: Exclude<string, 'await'>;
     txVariant: string;
-    issuers: IssuerItem[];
+    issuers?: IssuerItem[];
 }
 
 export type EnrollmentProps = AwaitProps | IssuerListProps;
